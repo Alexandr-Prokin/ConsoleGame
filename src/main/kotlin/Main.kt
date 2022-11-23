@@ -48,7 +48,7 @@ fun main(args: Array<String>) {
                     println("Игрок промахнулся")
                 }
                 println("-\t-\t-\t-\t-\t-\t-\t-\t-")
-                if (castCube(monster.attack, player.protection)) {
+                if (castCube(monster.attack, player.protection) && monster.health != 0) {
                     player.health -= monster.attackEnemy()
                     player.checkHealth()
                 } else {
